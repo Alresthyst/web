@@ -4,9 +4,10 @@
 
 	<script>
 		var jbPath = window.location.href;
-		var jbPathSplit = jbPath.split("http://alresthyst.github.io/web");
+		var jbPathUrl = new URL(jbPath);
+		var pathValue = jbPathUrl.searchParams.get("path");
 
-		window.location.replace("http://www.naver.com/" + jbPathSplit[1]);
+		window.location.replace("http://www.naver.com/" + pathValue);
 
 	</script>
 
